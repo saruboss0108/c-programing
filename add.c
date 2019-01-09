@@ -3,20 +3,22 @@
 struct add{
     int a,b;
 };
-int input(struct add* q)
+/*int input(struct add* q)
 {
    printf("enter 2 numbers\n");
    scanf(" %d %d", &q->a, &q->b);
 
-}
-/*int input1(void)
+}*/
+int input(void)
 {
-   int a,b;
-   printf("enter 2 numbers\n");
-   scanf("%d",&a);
-   return a;
+   struct add q;
+   printf("enter 1st number\n");
+   scanf("%d",&q.a);
+   printf("enter 2nd number\n");
+   scanf("%d",&q.b);
+
 }
-int input2(void)
+/*int input2(void)
 {
    int b;
    scanf("%d",&b);
@@ -29,19 +31,18 @@ int compute(int s,int r)
 }
 void output(int m)
 {
-    printf("sum = %d", m);
+    printf(" sum = %d", m);
 }
-int main(void)
+/*int main(void)
 {   struct add q;
     input(&(q));
     int n=compute(q.a, q.b);
-    printf(" a=%d, b=%d",q.a, q.b);
+    printf(" a=%d, b=%d\n",q.a, q.b);
     output(n);
-}
-/*int main(void)
+}*/
+int main(void)
 {
-    int a=input1();
-    int b=input2();
+    input();
     int n=compute(a,b);
     output(n);
 }*/

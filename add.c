@@ -7,16 +7,17 @@ struct add{
 {
    printf("enter 2 numbers\n");
    scanf(" %d %d", &q->a, &q->b);
-
 }*/
 int input(void)
 {
    struct add q;
    printf("enter 1st number\n");
    scanf("%d",&q.a);
+   printf("a = %d\n",q.a);
    printf("enter 2nd number\n");
    scanf("%d",&q.b);
-
+   printf("b = %d\n",q.b);
+   int c = compute(q);
 }
 /*int input2(void)
 {
@@ -24,9 +25,9 @@ int input(void)
    scanf("%d",&b);
    return b;
 }*/
-int compute(int s,int r)
+int compute(struct add q)
 {
-    int c = r+s;
+    int c = q.a+q.b;
     return c;
 }
 void output(int m)
@@ -42,9 +43,8 @@ void output(int m)
 }*/
 int main(void)
 {
-    input();
-    int n=compute(a,b);
-    output(n);
-}*/
-
+     struct add q;
+    int a = input();
+    output(a);
+}
 

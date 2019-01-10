@@ -1,0 +1,45 @@
+#include<stdio.h>
+
+struct compare
+{
+    int a,b,c;
+};
+
+int main()
+{
+    int c=input();
+    output(c);
+}
+
+int input(void)
+{
+   struct compare q;
+   printf("enter 1st number\n");
+   scanf("%d",&q.a);
+   printf("enter 2nd number\n");
+   scanf("%d",&q.b);
+   printf("enter 3nd number\n");
+   scanf("%d",&q.c);
+   int c = compute(q);
+   return c;
+}
+
+int compute(struct compare q)
+{
+    if(q.a < q.b && q.a < q.c)
+    { return q.a;
+    }
+    if(q.b < q.c)
+    {
+        return q.b;
+    }
+    else
+    {
+        return q.c;
+    }
+}
+
+int output(int m)
+{
+    printf(" the smaller number is %d", m);
+}

@@ -10,11 +10,11 @@ int main()
 
 int input(int *a, int*b)
 {
-        printf("Enter 2 numbers\n");
-        scanf("%d",a);
+	printf("Enter 2 numbers\n");
+	scanf("%d",a);
         scanf("%d",b);
 
-
+   
 }
 int compute(int a,int b)
 {
@@ -31,4 +31,3 @@ void output(int m)
 {
     printf(" the smaller number is %d", m);
 }
-

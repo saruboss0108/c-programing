@@ -1,41 +1,34 @@
 #include<stdio.h>
 
-struct compare
-{
-    int a,b,c;
-};
-
 int main()
-{
-    int c=input();
-    output(c);
+{   int x,y,z,a;
+    input(&x,&y,&z);
+    a = compute(x,y);
+    output(a);
 }
 
-int input(void)
+int input(int *a, int *b, int *c)
 {
-   struct compare q;
    printf("enter 1st number\n");
-   scanf("%d",&q.a);
+   scanf("%d",a);
    printf("enter 2nd number\n");
-   scanf("%d",&q.b);
+   scanf("%d",b);
    printf("enter 3nd number\n");
-   scanf("%d",&q.c);
-   int c = compute(q);
-   return c;
+   scanf("%d",c);
 }
 
-int compute(struct compare q)
+int compute(int a, int b, int c)
 {
-    if(q.a < q.b && q.a < q.c)
-    { return q.a;
-    }
-    if(q.b < q.c)
+    if(a < b && a < c)
+    { return a;
+  }
+    if(b < c)
     {
-        return q.b;
+        return b;
     }
     else
     {
-        return q.c;
+        return c;
     }
 }
 
@@ -43,3 +36,4 @@ int output(int m)
 {
     printf(" the smaller number is %d", m);
 }
+

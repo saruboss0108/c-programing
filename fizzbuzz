@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<string.h>
+int main()
+{
+    char c[]= "fizz", d[]= "buzz";
+    for(int i=0;i<=100;i++)
+    {
+        if(i % 3 == 0){printf("%s",c);}
+        if(i % 5 == 0){printf("%s",d);}
+        else{printf("%d",i);}
+        printf("\n");
+    }
+}

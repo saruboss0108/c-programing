@@ -3,6 +3,9 @@
 #define comp3(a,b,c) (comp(a,b)>c?c:comp(a,b))
 int main()
 {   int x,y,z,a;
+    int input( int*, int*, int*);
+    int compute(int, int, int);
+    int output( int); 
     input(&x,&y,&z);
     a = compute(x,y,z);
     output(a);

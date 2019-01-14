@@ -1,0 +1,70 @@
+#include<stdio.h>
+
+struct frac
+{int num1,dom1,num2,dom2,num3,dom3;};
+
+
+/*int main()
+{
+    struct frac q;
+    int a,b;
+    int input1( int*, int*);
+    int input2( int*, int*);
+    int compute1(int, int, int, int);
+    int compute2(int, int);
+    int output( int); 
+    input1(&q.num1,&q.dom1);
+    input2(&q.num2,&q.dom2);
+    a=compute1(q.num1,q.dom1,q.num2,q.dom2 );
+    b=compute2(q.dom1,q.dom2 );
+    output(a);
+}*/
+
+int main()
+{
+	struct frac q;
+	int input(struct frac q);
+	int compute(struct frac q);
+	int output(struct frac q);
+	input(q);
+	compute(q);
+	output(q);
+}
+
+int input(struct frac q)
+{	
+	printf("type the first fraction[numerator denominator]\n");
+	scanf("%d %d",&q.num1,&q.dom1);
+	printf("type the second fraction[numerator denominator]\n");
+	scanf("%d %d",&q.num2,&q.dom2);
+	return q;
+}
+
+int compute(struct frac q)
+{
+	int d;
+	q.num3 = (q.num1*q.dom2) + (q.num2*q.dom1);
+	q.dom3 = q.dom2*q.dom1;
+	
+	if(q.num3>q.dom3)
+	{d=q.dom3;}
+	
+	if(q.num3<q.dom3) 
+	{d=q.num3;}
+
+	if(q.num3==q.dom3) 
+	{q.num3=q.dom3=1;}
+	
+	for(int i=d;i>1;i--)
+	{if(q.num3 % i == 0 && q.dom3 % i == 0)
+	{q.num3=q.num3/i;
+	 q.dom3=q.dom3/i;
+}
+}
+	return q;
+}
+
+int output(struct frac q)
+{	
+	printf(" the sum is %d/%d",q.num3,q.dom3);
+}

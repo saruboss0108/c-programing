@@ -2,9 +2,10 @@
 
 int main()
 {	int num,b;
-	
+	int input();
+	int compute(int);
+	int output(int,int);
 	num=input();
-	
 	b = compute(num);
 	output(b,num);
 }

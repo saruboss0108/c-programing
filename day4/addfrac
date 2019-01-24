@@ -3,7 +3,7 @@
 struct frac
 {int num1,dom1,num2,dom2,num3,dom3;};
 
-
+//should we take just 2 variables for numerator and denominator and assign 2 objects for the structure OR should we take 4 variables in structure with 1 structure object 
 /*int main()
 {
     struct frac q;
@@ -23,24 +23,23 @@ struct frac
 int main()
 {
 	struct frac q;
-	int input(struct frac q);
-	int compute(struct frac q);
-	int output(struct frac q);
-	input(q);
+	void input(struct frac *q);
+	void compute(struct frac q);
+	void output(struct frac q);
+	input(&q);
 	compute(q);
 	output(q);
 }
 
-int input(struct frac q)
+void input(struct frac *q)
 {	
 	printf("type the first fraction[numerator denominator]\n");
-	scanf("%d %d",&q.num1,&q.dom1);
+	scanf("%d %d",q->num1,q->dom1);
 	printf("type the second fraction[numerator denominator]\n");
-	scanf("%d %d",&q.num2,&q.dom2);
-	return q;
+	scanf("%d %d",q->num2,q->dom2);
 }
 
-int compute(struct frac q)
+void compute(struct frac q)
 {
 	int d;
 	q.num3 = (q.num1*q.dom2) + (q.num2*q.dom1);
@@ -61,10 +60,9 @@ int compute(struct frac q)
 	 q.dom3=q.dom3/i;
 }
 }
-	return q;
 }
 
-int output(struct frac q)
+void output(struct frac q)
 {	
 	printf(" the sum is %d/%d",q.num3,q.dom3);
 }

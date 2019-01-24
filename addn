@@ -1,44 +1,33 @@
 #include<stdio.h>
 
 int main()
-{	int b; int i,x;
+{	int num,b;
 	
-       
-	int *num;
 	num=input();
 	
-	for(int r=0;r<i;r++)
-{
-	printf("%d",a[i]);}	
-	
-	//b = compute(a,i);
-	//output(b,i);
-
-
+	b = compute(num);
+	output(b,num);
 }
 
-int *input()
-{	int a[20]; int i;
+int input()
+{	 int i;
 	 printf("how many numbers you want?\n");
         scanf("%d",&i);
-	printf("type the numbers\n");
-	for(int x=0;x<i;x++)
-	{  scanf("%d",&a[x]);
-	}
-        return a;
+        return i;
 }
 
-int compute(int a[], int i)
-{	int s=0;
-	for(int r=0;r<i;r++)
-{
-	printf("%d",a[i]);}	
-
-
-for(int r=0;r<i;r++)
-{
-	s= s + a[i];
-}
+int compute( int i)
+{	int sum=0,num[20];
+	 printf("enter numbers to be added:");
+        for(int x=0;x<i;x++)
+        {
+                scanf("%d",&num[x]);
+        }
+	 for (int x=0;x<i;x++)
+        {
+                sum=sum+num[x];
+        }
+        return sum;	
 }
 
 int output(int m, int c)
